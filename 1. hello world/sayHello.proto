@@ -1,0 +1,15 @@
+syntax = "proto3";
+
+package helloWorld;
+
+option go_package = "helloWorld_protocolBuffer/";
+
+service SayHello {
+	rpc GetHelloWorldFromServer(Empty) returns (HelloMsg);
+}
+
+message Empty {}
+
+message HelloMsg {
+	string msg = 1;
+}
